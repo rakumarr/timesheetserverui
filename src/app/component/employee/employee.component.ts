@@ -1,0 +1,22 @@
+import {Component, OnInit} from '@angular/core';
+import {EmployeeData} from './employee.module';
+import {EmployeeDataServices} from './employee.services';
+
+
+@Component({
+  selector: 'app-employee',
+  templateUrl: './employee.component.html',
+  styleUrls: ['./employee.component.css']
+})
+export class EmployeeComponent implements OnInit {
+  title = ' Add Employee';
+  employeeData: EmployeeData[];
+
+  constructor(private employeeDataServices: EmployeeDataServices) {
+  }
+
+  ngOnInit() {
+    this.employeeDataServices.getEmployeeData()
+      .subscribe(employeeData => this.employeeData = employeeData);
+  }
+}

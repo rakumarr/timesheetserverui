@@ -1,0 +1,15 @@
+<div class="container-fluid">
+  <h3>{{ title }}</h3>
+  <hr>
+  <ul>
+    <h2>Employee Data</h2>
+    <li *ngFor="let empdata of employeeData">
+      <div class="panel-body">
+      <p>{{ empdata.firstName }}</p>
+      <p>{{ empdata.lastName }}</p>
+      <p>{{ empdata.gender }}</p>
+      <p>{{ empdata.role }}</p>
+      </div>
+    </li>
+  </ul>
+</div>
