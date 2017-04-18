@@ -3,4 +3,5 @@ export class EmployeeData {
   lastName: string;
   gender: string;
   role: string;
+  email: string;
 }

@@ -1,15 +1,62 @@
+<div class="col-sm-12">
 <div class="container-fluid">
   <h3>{{ title }}</h3>
-  <hr>
-  <ul>
-    <h2>Employee Data</h2>
-    <li *ngFor="let empdata of employeeData">
-      <div class="panel-body">
-      <p>{{ empdata.firstName }}</p>
-      <p>{{ empdata.lastName }}</p>
-      <p>{{ empdata.gender }}</p>
-      <p>{{ empdata.role }}</p>
+</div>
+    <hr>
+  <div class="container" >
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Gender</th>
+        <th>Role</th>
+        <th>Email</th>
+        <th><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add</button></th>
+      </tr>
+      </thead>
+      <tbody *ngFor="let empdata of employeeData">
+      <tr>
+        <td>{{ empdata.firstName }}</td>
+        <td>{{ empdata.lastName }}</td>
+        <td>{{ empdata.gender }}</td>
+        <td>{{ empdata.role }}</td>
+        <td>{{ empdata.email }}</td>
+        <td><button type="button" class="btn btn-warning">Edit</button></td>
+        <td><button type="button" class="btn btn-danger">Delete</button></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Employee Details</h4>
       </div>
-    </li>
-  </ul>
+      <form class="form-horizontal">
+          <div class="modal-body">
+            <label>FirstName</label>
+            <input type="text" id="firstName">
+            <label>LastName</label>
+            <input type="text" id="lastName">
+            <label>Gender</label>
+            <input type="text" id="gender">
+            <label>Role</label>
+            <input type="text" id="role">
+            <label>Email</label>
+            <input type="text" id="Email">
+          </div>
+      </form>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
 </div>
