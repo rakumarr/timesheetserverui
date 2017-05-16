@@ -9,6 +9,7 @@ import { EmployeeDataServices } from './component/employee/employee.services';
 import { RoleComponent } from './component/role/role.component';
 import {RoleDataServices} from './component/role/role.services';
 import { NewdataComponent } from './component/newdata/newdata.component';
+import { NavbarComponent } from './component/navbar/navbar.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { NewdataComponent } from './component/newdata/newdata.component';
     AppComponent,
     EmployeeComponent,
     RoleComponent,
-    NewdataComponent
+    NewdataComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
