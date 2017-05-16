@@ -5,4 +5,5 @@ export const EMPOLYEEDATA: EmployeeData[] = [{
   'lastName': 'kumar',
   'gender': 'male',
   'role': 'Developer',
+  'email': 'rajesh@gmial.com'
 }];

@@ -1,14 +1,47 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Timesheetserverui</title>
-  <base href="/">
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Website Font style -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="src/app/component/newdata/newdata.component.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+  <title>Timesheet-App</title>
 </head>
 <body>
-  <app-root>Loading...</app-root>
-</body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="index.html" class="navbar-brand">TimesheetApp</a>
+        <button type="button" class="navbar-toggle collapsed">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+          <ul class="nav navbar-nav navbar-right collapse navbar-collapse">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="#">page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+        </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row main">
+      <app-root>Loading...</app-root>
+    </div>
+  </div>
+  <script>
+    System.import('app-root').catch(Function.prototype.bind.call(console.log, console));
+  </script>
+  </body>
 </html>

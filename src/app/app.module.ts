@@ -7,20 +7,23 @@ import { AppComponent } from './app.component';
 import { EmployeeComponent } from './component/employee/employee.component';
 import { EmployeeDataServices } from './component/employee/employee.services';
 import { RoleComponent } from './component/role/role.component';
+import {RoleDataServices} from './component/role/role.services';
+import { NewdataComponent } from './component/newdata/newdata.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeComponent,
-    RoleComponent
+    RoleComponent,
+    NewdataComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [EmployeeDataServices],
+  providers: [EmployeeDataServices, RoleDataServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
