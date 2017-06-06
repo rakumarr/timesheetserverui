@@ -10,6 +10,8 @@ import { RoleComponent } from './component/role/role.component';
 import {RoleDataServices} from './component/role/role.services';
 import { NewdataComponent } from './component/newdata/newdata.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
+import { AdminComponent } from './component/admin/admin.component';
+import { LoginComponent } from './component/login/login.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { NavbarComponent } from './component/navbar/navbar.component';
     EmployeeComponent,
     RoleComponent,
     NewdataComponent,
-    NavbarComponent
+    NavbarComponent,
+    AdminComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

@@ -9,7 +9,7 @@ import {EmployeeDataServices} from './employee.services';
   styleUrls: ['./employee.component.css']
 })
 export class EmployeeComponent implements OnInit {
-  title = ' Add Employee';
+  title = 'Employee Details';
   employeeData: EmployeeData[];
 
   constructor(private employeeDataServices: EmployeeDataServices) {
