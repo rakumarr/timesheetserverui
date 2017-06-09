@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit} from '@angular/core';
 import {EmployeeData} from './employee.module';
 import {EmployeeDataServices} from './employee.services';
 
@@ -15,8 +15,17 @@ export class EmployeeComponent implements OnInit {
   constructor(private employeeDataServices: EmployeeDataServices) {
   }
 
-  ngOnInit() {
+  /*ngOnInit() {
     this.employeeDataServices.getEmployeeData()
       .subscribe(employeeData => this.employeeData = employeeData);
+  } */
+
+  getEmpData() {
+    this.employeeDataServices.getEmployeeData()
+      .subscribe(employeeData => this.employeeData = employeeData);
+  }
+
+  ngOnInit() {
+
   }
 }
