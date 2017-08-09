@@ -1,23 +1,10 @@
 .navbar-brand {
   display: inline-block;
-  /*padding-top: 4px;
-  line-height: inherit;
-  white-space: nowrap;
-  padding-bottom: 4px;*/
   margin-right: 16px;
   font-size: 25px;
-
 }
 
 .navbar-default .navbar-brand {
   color: #337ab7;
 }
 
-/*
-.container-fluid {
-  background: yellowgreen;
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-*/
