@@ -16,11 +16,11 @@ import { HomeComponent } from './component/home/home.component';
 
 const appRoutes: Routes = [
   {
-    path: 'emp',
+    path: 'Emp',
     component: EmployeeComponent
   },
   {
-    path: 'role',
+    path: 'Role',
     component: RoleComponent
   },
   {

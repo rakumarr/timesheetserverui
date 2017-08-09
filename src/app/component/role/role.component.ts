@@ -8,7 +8,7 @@ import {RoleData} from './role.module';
   styleUrls: ['./role.component.css']
 })
 export class RoleComponent implements OnInit {
-  title = 'Add Role';
+  title = 'Role Details';
   roleData: RoleData[];
 
   constructor(private roleDataServices: RoleDataServices) {
