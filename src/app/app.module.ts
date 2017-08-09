@@ -8,9 +8,7 @@ import { EmployeeComponent } from './component/employee/employee.component';
 import { EmployeeDataServices } from './component/employee/employee.services';
 import { RoleComponent } from './component/role/role.component';
 import {RoleDataServices} from './component/role/role.services';
-import { NewdataComponent } from './component/newdata/newdata.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
-import { AdminComponent } from './component/admin/admin.component';
 import { LoginComponent } from './component/login/login.component';
 
 
@@ -19,9 +17,7 @@ import { LoginComponent } from './component/login/login.component';
     AppComponent,
     EmployeeComponent,
     RoleComponent,
-    NewdataComponent,
     NavbarComponent,
-    AdminComponent,
     LoginComponent
   ],
   imports: [
