@@ -12,18 +12,5 @@ export class RoleDataServices {
   getRoleData() {
     return this.http.get('https://shielded-harbor-21142.herokuapp.com/roles/all')
       .map(response => <RoleData[]> response.json());
-  };
-
-  createRoleDate() {
-
-    const roleDescription = 'AutoTest';
-    const roleName = 'AutoTest';
-
-    const body = 'roleDescription=' + roleDescription + '&roleName=' + roleName;
-    const headers = new Headers();
-    headers.append('Content-Type', 'application/x-www-form-urlencoded');
-    this.http.post('https://shielded-harbor-21142.herokuapp.com/roles/create', body, {
-      headers: headers})
-      .map(response => <RoleData[]> response.json());
-  };
+  }
 }

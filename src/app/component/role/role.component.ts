@@ -17,9 +17,6 @@ export class RoleComponent implements OnInit {
   ngOnInit() {
     this.roleDataServices.getRoleData()
       .subscribe(roleData => this.roleData = roleData);
-
-    /*this.roleDataServices.createRoleDate()
-      .subscribe(roleData => this.roleData = roleData);*/
   }
 }
 
