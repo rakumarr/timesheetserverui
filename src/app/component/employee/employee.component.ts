@@ -9,7 +9,7 @@ import {EmployeeDataServices} from './employee.services';
   styleUrls: ['./employee.component.css']
 })
 export class EmployeeComponent implements OnInit {
-  title = 'Employee Details';
+  title: String = 'Employee Details';
   employeeData: EmployeeData[];
 
   constructor(private employeeDataServices: EmployeeDataServices) {
@@ -17,7 +17,7 @@ export class EmployeeComponent implements OnInit {
 
   ngOnInit() {
     this.employeeDataServices.getEmployeeData()
-      .subscribe(employeeData => this.employeeData = employeeData);
+      .then(employeeData => this.employeeData = employeeData);
   }
 /*
   getEmpData() {
