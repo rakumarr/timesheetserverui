@@ -27,7 +27,7 @@
             <td>{{ empdata.gender }}</td>
             <td>{{ empdata.role }}</td>
             <td>{{ empdata.email }}</td>
-            <td><button type="button" class="btn btn-warning">Edit</button></td>
+            <td><button type="button" class="btn btn-warning" data-toggle="modal" data-target=".bd-example-modal-md">Edit</button></td>
             <td><button type="button" class="btn btn-danger">Delete</button></td>
           </tr>
           </tbody>
@@ -35,3 +35,26 @@
       </div>
   </div>
 </div>
+
+
+<div class="modal fade bd-example-modal-md" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Employee Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <app-employee-forms></app-employee-forms>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
