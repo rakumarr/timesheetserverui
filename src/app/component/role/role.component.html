@@ -20,11 +20,45 @@
         <tr>
           <td>{{ roleAllData.roleName }}</td>
           <td>{{ roleAllData.roleDescription }}</td>
-          <td><button type="button" class="btn btn-warning">Edit</button></td>
-          <td><button type="button" class="btn btn-danger">Delete</button></td>
+          <td><button type="button" name="edit" class="btn btn-warning" data-toggle="modal" data-target=".bd-example-modal-md"><i class="fa fa-edit"></i></button></td>
+          <td><button type="button" name="delete" class="btn btn-danger"><i class="fa fa-minus" (click)="removeRole(ind)"></i></button></td>
         </tr>
         </tbody>
       </table>
+      <button type="button" name="add" class="btn btn-info" data-toggle="modal" data-target=".bd-example-modal-md"><i class="fa fa-plus"></i></button>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade bd-example-modal-md" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Role Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group row">
+            <label for="example-text-inputFirstName" class="col-sm-3 col-form-label">Role Name</label>
+            <div class="col-sm-7">
+              <input class="form-control" type="text" value="" name="roleName" id="example-text-inputFirstName" [(ngModel)]="newRoleData.roleName">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="example-text-inputLastName" class="col-3 col-form-label">Role Description</label>
+            <div class="col-sm-7">
+              <input class="form-control" type="text" value="" name="roleDescription" id="example-text-inputLastName" [(ngModel)]="newRoleData.roleDescription">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="saveRole(newRoleData)">Save</button>
+      </div>
     </div>
   </div>
 </div>

@@ -10,6 +10,7 @@ import {RoleData} from './role.module';
 export class RoleComponent implements OnInit {
   title = 'Role Details';
   roleData: RoleData[];
+  newRoleData: any = {};
 
   constructor(private roleDataServices: RoleDataServices) {
   }
@@ -17,6 +18,23 @@ export class RoleComponent implements OnInit {
   ngOnInit() {
     this.roleDataServices.getRoleData()
       .subscribe(roleData => this.roleData = roleData);
+  }
+  saveRole() {
+    if (this.newRoleData !== {}) {
+      this.roleData.push(this.newRoleData);
+      this.newRoleData = '';
+    }
+  }
+
+  editRole() {
+    if (this.newRoleData !== {}) {
+      this.roleData.push(this.newRoleData);
+      this.newRoleData = '';
+    }
+  }
+
+  removeRole(index) {
+    this.roleData.splice(index, 1);
   }
 }
 

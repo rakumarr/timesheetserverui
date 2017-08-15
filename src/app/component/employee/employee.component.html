@@ -16,22 +16,21 @@
             <th>Gender</th>
             <th>Role</th>
             <th>Email</th>
-            <!--<th><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add</button></th>
-            <th><button type="button" class="btn btn-primary" (click)="getEmpData()">Add</button></th>-->
           </tr>
           </thead>
-          <tbody *ngFor="let empdata of employeeData">
+          <tbody *ngFor="let empdata of employeeData; let ind = index">
           <tr>
             <td>{{ empdata.firstName }}</td>
             <td>{{ empdata.lastName }}</td>
             <td>{{ empdata.gender }}</td>
             <td>{{ empdata.role }}</td>
             <td>{{ empdata.email }}</td>
-            <td><button type="button" class="btn btn-warning" data-toggle="modal" data-target=".bd-example-modal-md">Edit</button></td>
-            <td><button type="button" class="btn btn-danger">Delete</button></td>
+            <td><button type="button" name="edit" class="btn btn-warning" data-toggle="modal" data-target=".bd-example-modal-md" (click)="showEditEmployeeForm(empdata)"><i class="fa fa-edit"></i></button></td>
+            <td><button type="button" name="delete" class="btn btn-danger"><i class="fa fa-minus" (click)="removeEmployee(ind)"></i></button></td>
           </tr>
           </tbody>
         </table>
+        <button type="button" name="add" class="btn btn-info" data-toggle="modal" data-target=".bd-example-modal-md"><i class="fa fa-plus"></i></button>
       </div>
   </div>
 </div>
@@ -47,11 +46,42 @@
         </button>
       </div>
       <div class="modal-body">
-        <app-employee-forms></app-employee-forms>
+        <form>
+          <div class="form-group row">
+            <label for="example-text-inputFirstName" class="col-sm-3 col-form-label">First Name</label>
+            <div class="col-sm-7">
+              <input class="form-control" type="text" value="" name="firstName" id="example-text-inputFirstName" [(ngModel)]="newEmployeeData.firstName">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="example-text-inputLastName" class="col-3 col-form-label">Last Name</label>
+            <div class="col-sm-7">
+              <input class="form-control" type="text" value="" name="lastName" id="example-text-inputLastName" [(ngModel)]="newEmployeeData.lastName">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="example-text-inputRole" class="col-3 col-form-label">Role</label>
+            <div class="col-sm-7">
+              <input class="form-control" type="text" value="" name="role" id="example-text-inputRole" [(ngModel)]="newEmployeeData.role">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="example-email-input" class="col-3 col-form-label">Email</label>
+            <div class="col-sm-7">
+              <input class="form-control" type="email" value="" name="email" id="example-email-input" [(ngModel)]="newEmployeeData.email">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="example-text-inputGender" class="col-3 col-form-label">Gender</label>
+            <div class="col-sm-7">
+              <input class="form-control" type="text" value="" name="gender" id="example-text-inputGender" [(ngModel)]="newEmployeeData.gender">
+            </div>
+          </div>
+        </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-primary">Save</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="saveEmployee(newEmployeeData)">Save</button>
       </div>
     </div>
   </div>

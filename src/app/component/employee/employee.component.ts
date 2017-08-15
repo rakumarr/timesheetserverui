@@ -11,18 +11,34 @@ import {EmployeeDataServices} from './employee.services';
 export class EmployeeComponent implements OnInit {
   title: String = 'Employee Details';
   employeeData: EmployeeData[];
+  newEmployeeData: any = {};
 
   constructor(private employeeDataServices: EmployeeDataServices) {
   }
 
+  /*
+   getEmpData() {
+   this.employeeDataServices.getEmployeeData()
+   .subscribe(employeeData => this.employeeData = employeeData);
+   }
+   */
   ngOnInit() {
     this.employeeDataServices.getEmployeeData()
       .then(employeeData => this.employeeData = employeeData);
   }
 /*
-  getEmpData() {
-    this.employeeDataServices.getEmployeeData()
-      .subscribe(employeeData => this.employeeData = employeeData);
+  showEditEmployeeForm(empdata: EmployeeData) {
+    this.newEmployeeData = empdata;
   }
 */
+  saveEmployee() {
+    if (this.newEmployeeData !== {}) {
+      this.employeeData.push(this.newEmployeeData);
+      this.newEmployeeData = '';
+    }
+  }
+
+  removeEmployee(index) {
+    this.employeeData.splice(index, 1);
+  }
 }
