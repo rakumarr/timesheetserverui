@@ -12,8 +12,6 @@ import {RoleDataServices} from './component/role/role.services';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { LoginComponent } from './component/login/login.component';
 import { HomeComponent } from './component/home/home.component';
-import { EmployeeFormsComponent } from './component/employee-forms/employee-forms.component';
-
 
 const appRoutes: Routes = [
   {
@@ -26,7 +24,7 @@ const appRoutes: Routes = [
   },
   {
     path: '',
-    component: HomeComponent
+    component: LoginComponent
   }
 ];
 
@@ -38,8 +36,7 @@ const appRoutes: Routes = [
     RoleComponent,
     NavbarComponent,
     LoginComponent,
-    HomeComponent,
-    EmployeeFormsComponent
+    HomeComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
