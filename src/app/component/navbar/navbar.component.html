@@ -1,24 +1,24 @@
-<div class="container-fluid">
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-    <!-- Brand -->
-    <a class="navbar-brand" href="#">TimeSheet-App</a>
-    <!-- Links -->
-    <div class="collapse navbar-collapse justify-content-end" id="nav-content">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" >Login</a>
-        </li>
-        <li class="nav-item">
-         <a class="nav-link" routerLink="Emp" routerLinkActive="active">Employee</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="Role" routerLinkActive="active">Role</a>
-        </li>
-      </ul>
+<div class="container spacing">
+    <div class="container account-wall">
+        <div class="row">
+            <div class="col-12 col-md-12 col-lg-6 col-1">
+                <h1 class="h1">TimeApp</h1>
+                <h2 class="h2">Keep track of your working time</h2>
+                <hr class="hline">
+                <div class="content">
+                    <p>Create time reports fast and easy</p>
+                    <p>View your reports and track your status</p>
+                    <p>Supports desktop and mobile</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-6 col-2">
+                <form class="form-signin">
+                    <input type="text" class="form-control" placeholder="Username" required autofocus>
+                    <input type="password" class="form-control" placeholder="Password" required>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                    <a href="#" class="pull-right forget-pas">Forget Password? </a><span class="clearfix"></span>
+                </form>
+            </div>
+        </div>
     </div>
-  </nav>
 </div>
-
