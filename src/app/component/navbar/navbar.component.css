@@ -1,81 +1,9 @@
-.spacing {
-    margin-top: 150px;
+.navbar-brand {
+    display: inline-block;
+    margin-right: 16px;
+    font-size: 25px;
 }
 
-.account-wall {
-    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
-}
-
-.h1 {
-    font-size: 70px;
-    text-align: center;
-}
-
-.h2 {
-    font-size: 17px;
-    text-align: center;
-    padding: 5px 0px 40px 0px;
-}
-
-.hline {
-    width: 25%;
-    border-bottom: 1px solid #ffffff;
-}
-
-.content {
-    text-align: center;
-    padding: 40px 0px 0px 0px;
-}
-
-.col-1 {
-    background-color: #357ebd;
-    color: #ffffff;
-    padding: 70px 0px 70px 0px;
-}
-
-.col-2 {
-    background-color: #ffffff;
-    padding: 100px 120px 50px 120px;
-}
-
-.form-signin .form-control {
-    position: relative;
-    font-size: 16px;
-    height: auto;
-    padding: 10px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-.form-signin input[type="text"] {
-    margin-bottom: -1px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    padding: 17px 0px 17px 15px;
-}
-
-.form-signin input[type="password"] {
-    margin-bottom: 30px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    padding: 17px 0px 17px 15px;
-}
-
-.submit-btn {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    margin-bottom: 15px;
-}
-
-.forget-pas {
-    margin-top: 25px;
+.navbar-default .navbar-brand {
+    color: #337ab7;
 }
