@@ -1,10 +1,9 @@
 .navbar-brand {
-  display: inline-block;
-  margin-right: 16px;
-  font-size: 25px;
+    display: inline-block;
+    margin-right: 16px;
+    font-size: 25px;
 }
 
 .navbar-default .navbar-brand {
-  color: #337ab7;
+    color: #337ab7;
 }
-
