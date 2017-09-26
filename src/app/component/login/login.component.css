@@ -16,11 +16,11 @@
 .h2 {
     font-size: 17px;
     text-align: center;
-    padding: 5px 0px 40px 0px;
+    padding: 5px 0px 40px 65px;
 }
 
 .hline {
-    width: 25%;
+    width: 40%;
     border-bottom: 1px solid #ffffff;
 }
 
@@ -29,14 +29,13 @@
     padding: 40px 0px 0px 0px;
 }
 
-.col-1 {
-    font-family: 'Raleway', sans-serif;
+.first-col {
     background-color: #0275d8;
     color: #ffffff;
     padding: 70px 0px 70px 0px;
 }
 
-.col-2 {
+.second-col {
     background-color: #ffffff;
     padding: 150px 70px 0px 70px;
 }
@@ -79,4 +78,84 @@
 
 .forget-pas {
     margin-top: 25px;
+}
+
+@media (max-width: 768px) {
+    .reorder {
+        display: flex;
+        flex-direction: column;
+    }
+    .spacing {
+        margin-top: 150px
+    }
+    .first-col {
+        order: 2;
+    }
+    .second-col {
+        padding: 100px;
+    }
+    .content,
+    .hline {
+        display: none;
+    }
+}
+
+@media (max-width: 450px) {
+    .reorder {
+        display: flex;
+        flex-direction: column;
+    }
+    .spacing {
+        margin-top: 60px;
+    }
+    .first-col {
+        order: 2;
+    }
+    .second-col {
+        padding: 45px;
+    }
+    .content,
+    .hline {
+        display: none;
+    }
+}
+
+@media (max-width: 380px) {
+    .reorder {
+        display: flex;
+        flex-direction: column;
+    }
+    .spacing {
+        margin-top: 30px;
+    }
+    .first-col {
+        order: 2;
+    }
+    .second-col {
+        padding: 40px;
+    }
+    .content,
+    .hline {
+        display: none;
+    }
+}
+
+@media (max-width: 360px) {
+    .reorder {
+        display: flex;
+        flex-direction: column;
+    }
+    .spacing {
+        margin-top: 10px;
+    }
+    .first-col {
+        order: 2;
+    }
+    .second-col {
+        padding: 40px;
+    }
+    .content,
+    .hline {
+        display: none;
+    }
 }
